@@ -3,7 +3,7 @@
 
 import sys
 
-#sys.argv+=['example1.txt']
+sys.argv+=['example3.txt']
 
 basis = []
 
@@ -39,13 +39,12 @@ a - целое неотрицательное число, обозначающе
 b - целое неотрицательное число, обозначающее свободный член.
 
 Оставшиеся строки должны содержать ограничения в формате:
-[ { + | - }] [a] xi [ { + | - } [a] xi , [ ... ]] { < | > } b
+[ { + | - }] [a] xi [ { + | - } [a] xi , [ ... ]] { <= | >= } b
 где 
 i - неповторяющееся целое неотрицательное число, обозначающее номер переменной
 (переменные начинают нумероваться с нуля, и не должно быть переменных, которые не участвуют в целефой функции),
 a - целое неотрицательное число, обозначающее коэффицент перед переменной.
-b - целое неотрицательное число, обозначающее свободный член,
-под символами < и > подразумеваются нестрогие равенства.
+b - целое неотрицательное число, обозначающее свободный член.
      
 """
     else:
@@ -136,14 +135,14 @@ b - целое неотрицательное число, обозначающе
                 else:
                     #разбор строки с условием
                     A.append([0]*len(a))
-                    if line.find('<')!=-1:                        
-                        b.append(int(line[line.find('<')+1:]))
+                    if line.find('<=')!=-1:                        
+                        b.append(int(line[line.find('<=')+2:]))
                         less.append(True)
-                        func = line[:line.find('<')]
+                        func = line[:line.find('<=')]
                     else:
-                        b.append(int(line[line.find('>')+1:]))
+                        b.append(int(line[line.find('>=')+2:]))
                         less.append(False)
-                        func = line[:line.find('>')]
+                        func = line[:line.find('>=')]
                         
                     sign = func[0]!='-'
                     if func[0]=='+' or func[0]=='-':
@@ -279,7 +278,10 @@ b - целое неотрицательное число, обозначающе
             for i in range(len(basis)):
                 answer[basis[i]] = Table[i][len(a)+len(b)]
             print 'Ответ: ', answer[:len(a)]
-            print 'Значение целефой функции: ', Table[len(Table)-1][len(Table[0])-1]
+            extremum = 0
+            for i in range(len(a_origin)):
+                extremum += a_origin[i]*answer[i]              
+            print 'Значение целефой функции: ', extremum
             #for i in Table:
             #    print i    
                              
