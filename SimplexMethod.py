@@ -3,7 +3,7 @@
 
 import sys
 
-sys.argv+=['example3.txt']
+#sys.argv+=['example3.txt']
 
 basis = []
 
