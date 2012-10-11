@@ -77,9 +77,9 @@ b - целое неотрицательное число, обозначающе
 		</article>
 		
     </section>
-    <footer>
-    
+    <footer>    
       <p>Дмитрий Стебаев. 2012 год.</p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.ru"><img alt="Лицензия Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" /></a><br />Это <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">произведение</span>, автор которого — <a xmlns:cc="http://creativecommons.org/ns#" href="stebaev.com.ua" property="cc:attributionName" rel="cc:attributionURL">Дмитрий Стебаев</a>, доступно на условиях <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.ru">лицензии Creative Commons «Attribution-NoDerivs» («Атрибуция — Без производных произведений») 3.0 Непортированная</a>.<br />Основано на произведении с <a xmlns:dct="http://purl.org/dc/terms/" href="stebaev.com.ua/study/orm/" rel="dct:source">stebaev.com.ua/study/orm/</a>.</p>
     </footer>
   </body>
 </html>
